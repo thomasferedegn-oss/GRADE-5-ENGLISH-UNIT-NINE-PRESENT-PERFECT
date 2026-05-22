@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Assessment: Present Perfect Tense (Grade 5)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Noto Sans Ethiopic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Ethiopic', sans-serif;
+        }
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header Banner -->
+    <header class="bg-gradient-to-r from-blue-700 via-indigo-700 to-violet-800 text-white shadow-md py-5 px-4 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="text-center md:text-left">
+                <span class="bg-indigo-500/30 text-indigo-200 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border border-indigo-400/20">Grade 5 • Unit 9</span>
+                <h1 class="text-xl md:text-2xl font-extrabold tracking-tight mt-1">Living with Differences</h1>
+                <p class="text-indigo-100 text-xs md:text-sm">Comprehensive Present Perfect Tense Practice Assessment</p>
+            </div>
+            <div id="live-timer-container" class="hidden bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-3.5 py-1.5 flex items-center gap-2">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span class="text-xs font-semibold text-slate-100 uppercase tracking-widest">Time:</span>
+                <span id="live-timer" class="font-mono font-bold text-sm tracking-wider">00:00</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="max-w-3xl w-full bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden transition-all duration-300">
+            
+            <!-- SECTION 1: Welcome & Student Registration -->
+            <section id="registration-section" class="p-6 md:p-10 space-y-6">
+                <div class="text-center space-y-3">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-600 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Student Registration & Guidelines</h2>
+                    <p class="text-slate-500 text-sm max-w-lg mx-auto leading-relaxed">
+                        Welcome to the interactive assessment! Please enter your full name and student ID below to start. 
+                        The quiz consists of 60 questions with immediate automated grading and detailed bilingual explanations.
+                    </p>
+                </div>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3 text-amber-800 text-xs md:text-sm leading-relaxed">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 flex-shrink-0 mt-0.5 text-amber-600">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.25v2.75a.75.75 0 0 0 1.5 0v-3.5A.75.75 0 0 0 10 9H9Z" clip-rule="evenodd" />
+                    </svg>
+                    <div>
+                        <strong class="font-semibold text-amber-900">Quiz Instructions:</strong> Read each question carefully and select the best answer. If you answer incorrectly, the system will instantly highlight the right choice and present detailed linguistic breakdowns in both English and Amharic. You can skip questions or go back anytime.
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-2">
+                    <div>
+                        <label for="student-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Full Name / ሙሉ ስም <span class="text-red-500">*</span></label>
+                        <input type="text" id="student-name" placeholder="e.g. Almaz Kebede" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400 font-medium transition duration-150">
+                    </div>
+                    <div>
+                        <label for="student-id" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-1.5">Student ID / የተማሪ መለያ ቁጥር <span class="text-red-500">*</span></label>
+                        <input type="text" id="student-id" placeholder="e.g. GR5/0342/18" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 placeholder-slate-400 font-medium transition duration-150">
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <button id="btn-start" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl shadow-lg shadow-indigo-200 active:scale-[0.98] transition duration-150 flex items-center justify-center gap-2">
+                        Start Assessment / ፈተናውን ጀምር
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                    </button>
+                    <button id="btn-view-records" class="w-full sm:w-auto px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold rounded-xl active:scale-[0.98] transition duration-150 text-sm whitespace-nowrap">
+                        Teacher Dashboard
+                    </button>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Active Quiz Interface -->
+            <section id="quiz-section" class="hidden flex flex-col">
+                <!-- Session Metadata -->
+                <div class="bg-slate-50 border-b border-slate-100 px-6 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-xs" id="student-avatar">ST</div>
+                        <div>
+                            <p id="meta-student-name" class="font-bold text-slate-800 text-sm leading-tight">-</p>
+                            <p id="meta-student-id" class="text-slate-400 text-xs">-</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span id="question-index-badge" class="bg-indigo-50 text-indigo-700 font-bold text-xs px-2.5 py-1 rounded-full border border-indigo-100">Question 1/60</span>
+                        <span id="score-counter" class="bg-emerald-50 text-emerald-700 font-bold text-xs px-2.5 py-1 rounded-full border border-emerald-100">Score: 0</span>
+                    </div>
+                </div>
+
+                <!-- Linear Progress Bar -->
+                <div class="w-full bg-slate-100 h-1.5">
+                    <div id="progress-bar" class="bg-gradient-to-r from-blue-600 to-indigo-600 h-1.5 transition-all duration-300 w-[0%]"></div>
+                </div>
+
+                <!-- Question Prompt Container -->
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="space-y-2">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-indigo-500">Sentence Completion Task</span>
+                        <h3 id="question-text" class="text-lg md:text-xl font-bold text-slate-900 leading-snug">
+                            Loading question...
+                        </h3>
+                    </div>
+
+                    <!-- Multiple Choice Grid -->
+                    <div id="options-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                        <!-- Dynamic Options inserted here -->
+                    </div>
+
+                    <!-- Bilingual Explanation Box (Initially Hidden) -->
+                    <div id="explanation-box" class="hidden bg-slate-50 border-l-4 border-indigo-600 rounded-r-xl p-4 space-y-3 animate-fadeIn">
+                        <div class="flex items-center gap-2 text-indigo-700 font-bold text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-7-4a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM9 9a.75.75 0 0 0 0 1.5h.25v2.75a.75.75 0 0 0 1.5 0v-3.5A.75.75 0 0 0 10 9H9Z" clip-rule="evenodd" />
+                            </svg>
+                            Grammar Analysis & Explanation / ማብራሪያ
+                        </div>
+                        <div class="space-y-2.5 text-xs md:text-sm leading-relaxed">
+                            <p id="explanation-en" class="text-slate-700 font-medium">Loading English analysis...</p>
+                            <p id="explanation-am" class="text-slate-600 border-t border-slate-200/60 pt-2 font-medium">Loading Amharic translation...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Navigation Buttons -->
+                <div class="border-t border-slate-100 px-6 py-4 bg-slate-50 flex items-center justify-between gap-3 rounded-b-2xl">
+                    <button id="btn-back" class="px-5 py-2.5 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-100 text-slate-700 font-semibold rounded-lg text-sm flex items-center gap-1.5 transition duration-150 disabled:opacity-40 disabled:pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                        Back
+                    </button>
+                    <div class="flex items-center gap-2">
+                        <button id="btn-skip" class="px-4 py-2.5 text-slate-500 hover:text-slate-800 hover:bg-slate-100 font-semibold rounded-lg text-sm transition duration-150">
+                            Skip
+                        </button>
+                        <button id="btn-next" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg text-sm flex items-center gap-1.5 shadow-md shadow-indigo-100 transition duration-150">
+                            Next
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Detailed Report Card / Results Screen -->
+            <section id="results-section" class="hidden p-6 md:p-10 space-y-8">
+                <!-- Header Stats Card -->
+                <div class="text-center space-y-4">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 border-4 border-emerald-100 relative shadow-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-10 h-10">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Assessment Completed!</h2>
+                        <p class="text-slate-500 text-sm">Congratulations on completing the assessment. Your grades are ready.</p>
+                    </div>
+                </div>
+
+                <!-- Score Dashboard Display Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-center">
+                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Score</span>
+                        <strong id="final-score" class="block text-2xl font-bold text-indigo-700 mt-1">0/60</strong>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-center">
+                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Percentage</span>
+                        <strong id="final-percentage" class="block text-2xl font-bold text-indigo-700 mt-1">0%</strong>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-center">
+                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Performance</span>
+                        <strong id="final-rating" class="block text-sm font-bold text-emerald-600 mt-2 tracking-wide uppercase">Excellent</strong>
+                    </div>
+                    <div class="bg-slate-50 rounded-xl p-4 border border-slate-100 text-center">
+                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Time Taken</span>
+                        <strong id="final-time" class="block text-2xl font-bold text-indigo-700 mt-1">00:00</strong>
+                    </div>
+                </div>
+
+                <!-- Recipient Alert Banner -->
+                <div class="bg-blue-50 border border-blue-200 rounded-xl p-4 flex gap-3 text-blue-800 text-xs md:text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 flex-shrink-0 mt-0.5 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                    </svg>
+                    <div>
+                        <strong class="font-semibold text-blue-900">Email Submission Notice:</strong> 
+                        Examinees are requested to submit their final grades and verified score transcripts directly to the instructor email: <strong class="font-bold underline text-blue-900">mesayferedegn2@gmail.com</strong>.
+                    </div>
+                </div>
+
+                <!-- Submit and Retake Buttons -->
+                <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                    <button id="btn-email-results" class="flex-grow py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg shadow-emerald-100 transition duration-150 flex items-center justify-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path d="M3.105 2.289a.75.75 0 0 0-.826.95l1.414 4.925A1.5 1.5 0 0 0 5.135 9.25h6.115a.75.75 0 0 1 0 1.5H5.135a1.5 1.5 0 0 0-1.442 1.086l-1.414 4.926a.75.75 0 0 0 .826.95 28.896 28.896 0 0 0 15.293-7.154.75.75 0 0 0 0-1.115A28.897 28.897 0 0 0 3.105 2.289Z" />
+                        </svg>
+                        Send Report via Email
+                    </button>
+                    <button id="btn-review-answers" class="flex-grow py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl transition duration-150 flex items-center justify-center gap-2">
+                        Review Exam Sheet
+                    </button>
+                    <button id="btn-restart" class="px-6 py-4 border border-slate-200 hover:border-slate-300 text-slate-600 font-semibold rounded-xl transition duration-150">
+                        Try Again
+                    </button>
+                </div>
+            </section>
+
+            <!-- SECTION 4: Teacher Dashboard & Submission Archives -->
+            <section id="records-section" class="hidden p-6 md:p-8 space-y-6">
+                <div class="flex items-center justify-between gap-4 border-b border-slate-100 pb-4">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-10 h-10 rounded-xl bg-violet-50 text-violet-700 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.03 0 1.9.693 2.166 1.638m-7.377 2.24a.75.75 0 0 1-1.077-.191A48.47 48.47 0 0 0 5.11 5.34c-1.13.093-1.977 1.057-1.977 2.192v11.918A2.25 2.25 0 0 0 5.385 21.75h11.23a2.25 2.25 0 0 0 2.25-2.25V18.25" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold text-slate-900 tracking-tight">Teacher Admin Portal</h2>
+                            <p class="text-slate-400 text-xs">Manage locally archived grade books & exam submissions</p>
+                        </div>
+                    </div>
+                    <button id="btn-back-to-reg" class="text-xs font-bold text-indigo-600 hover:text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-3 py-2 rounded-lg transition duration-150">
+                        Exit Portal
+                    </button>
+                </div>
+
+                <div class="max-h-[350px] overflow-y-auto custom-scroll border border-slate-100 rounded-xl bg-slate-50">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-200/50 text-slate-600 text-[10px] font-bold tracking-wider uppercase border-b border-slate-200">
+                                <th class="p-3">Student Name</th>
+                                <th class="p-3">Student ID</th>
+                                <th class="p-3 text-center">Score</th>
+                                <th class="p-3 text-center">Duration</th>
+                                <th class="p-3 text-right">Timestamp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="records-tbody" class="text-xs divide-y divide-slate-100 bg-white">
+                            <!-- Populated via storage -->
+                        </tbody>
+                    </table>
+                    <div id="no-records-alert" class="hidden p-8 text-center text-slate-400 text-sm">
+                        No examination attempts archived on this device yet.
+                    </div>
+                </div>
+
+                <div class="flex gap-3 justify-end">
+                    <button id="btn-clear-records" class="px-4 py-2 text-xs font-bold text-red-600 hover:text-red-700 hover:bg-red-50 rounded-lg transition duration-150 border border-transparent hover:border-red-100">
+                        Reset Local Grade Book
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Interactive Bottom Modal for Post-Exam Review sheets -->
+    <div id="review-modal" class="hidden fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full h-[85vh] flex flex-col overflow-hidden animate-scaleIn">
+            <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+                <div>
+                    <h3 class="font-bold text-slate-900 text-lg">Detailed Exam Sheets Analysis</h3>
+                    <p class="text-slate-400 text-xs">Verify accuracy, correction sheets, and linguistic rationales</p>
+                </div>
+                <button id="btn-close-review" class="w-8 h-8 rounded-full bg-slate-50 hover:bg-slate-100 text-slate-500 flex items-center justify-center transition duration-150">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-grow overflow-y-auto p-6 space-y-6 custom-scroll bg-slate-50" id="review-items-container">
+                <!-- Comprehensive lists inserted programmatically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern footer -->
+    <footer class="bg-slate-900 text-slate-500 text-center py-5 border-t border-slate-800 text-xs mt-auto">
+        <div class="max-w-5xl mx-auto px-4 space-y-1">
+            <p class="font-semibold text-slate-400">Ethiopian Grade 5 English Language Assessment Module</p>
+            <p>&copy; 2026 Interactive Unit 9 Grammar Lab. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Comprehensive Questions & Logic Implementation -->
+    <script>
+        // 1. Comprehensive Question Set (All 60 Questions) with distributed correct options across A, B, C, D
+        const quizData = [
+            {
+                q: "We can go home now. We ________ our assignments.",
+                a: ["have finished", "has finished", "finished", "have finish"],
+                correct: 0,
+                rationale_en: "We use 'have' with the pronoun 'We' followed by the past participle 'finished'.",
+                rationale_am: "ከብዙ ቁጥር ተውላጠ ስም 'We' (እኛ) ጋር 'have' ረዳት ግስ እና የኃላፊ ጊዜ ግስ 'finished' (ፈጽመናል) እንጠቀማለን።"
+            },
+            {
+                q: "She ________ a very good essay. Look!",
+                a: ["have written", "has written", "wrote", "has write"],
+                correct: 1,
+                rationale_en: "Third-person singular 'She' takes 'has' + past participle 'written'.",
+                rationale_am: "ለነጠላ ተውላጠ ስም 'She' (እሷ) 'has' ረዳት ግስ እና የጻፈችውን ድርጊት ለመግለፅ 'written' (ጽፋለች) እንጠቀማለን።"
+            },
+            {
+                q: "Alemu ________ us apples; we can have some during lunch.",
+                a: ["have brought", "brought", "has brought", "has bring"],
+                correct: 2,
+                rationale_en: "Alemu is singular (he), so we use 'has' and the past participle 'brought'.",
+                rationale_am: "አለሙ ነጠላ ስም (እሱ) በመሆኑ 'has' ረዳት ግስ እና 'brought' (አምጥቷል) የተባለውን የኃላፊ ግስ እንጠቀማለን።"
+            },
+            {
+                q: "I ________ many new friends. Now I'm happy.",
+                a: ["has made", "made", "have make", "have made"],
+                correct: 3,
+                rationale_en: "The first-person pronoun 'I' takes 'have' + past participle 'made'.",
+                rationale_am: "የመጀመሪያ አካል 'I' (እኔ) ከሚለው ተውላጠ ስም ጋር 'have' ረዳት ግስ እና 'made' (አፍርቻለሁ/ሰርቻለሁ) የተባለውን ግስ እንጠቀማለን።"
+            },
+            {
+                q: "My father ________ to Assosa for a few days.",
+                a: ["has gone", "have gone", "went", "has go"],
+                correct: 0,
+                rationale_en: "Singular subject 'My father' requires 'has' followed by 'gone'.",
+                rationale_am: "ነጠላ ባለቤት 'My father' (አባቴ) 'has' ረዳት ግስ እና 'gone' (ሄዷል) የተባለውን ግስ ይፈልጋል።"
+            },
+            {
+                q: "They ________ the room very well. It smells good.",
+                a: ["has cleaned", "have cleaned", "cleaned", "have clean"],
+                correct: 1,
+                rationale_en: "Plural pronoun 'They' takes 'have' + past participle 'cleaned'.",
+                rationale_am: "የብዙ ቁጥር ተውላጠ ስም 'They' (እነሱ) 'have' ረዳት ግስ እና 'cleaned' (አጽድተዋል) የተባለውን ግስ ይወስዳል።"
+            },
+            {
+                q: "We ________ Oromo names to our children.",
+                a: ["has given", "gave", "have given", "have give"],
+                correct: 2,
+                rationale_en: "With 'We', the present perfect uses 'have' and the V3 form 'given'.",
+                rationale_am: "ከ'We' (እኛ) ጋር 'have' ረዳት ግስ እና 3ኛውን የግስ ደረጃ 'given' (ሰጥተናል) እንጠቀማለን።"
+            },
+            {
+                q: "Martha ________ a new dress.",
+                a: ["have bought", "bought", "has buy", "has bought"],
+                correct: 3,
+                rationale_en: "Martha (she) uses 'has' + past participle 'bought'.",
+                rationale_am: "ማርታ (እሷ) ስለሆነች 'has' ረዳት ግስ እና 'bought' (ገዝታለች) የሚለውን 3ኛ የግስ ደረጃ ይወስዳል።"
+            },
+            {
+                q: "He ________ the letter to the manager.",
+                a: ["has sent", "have sent", "sent", "has send"],
+                correct: 0,
+                rationale_en: "He takes 'has' plus the past participle form 'sent'.",
+                rationale_am: "'He' (እሱ) ከሚለው ጋር 'has' ረዳት ግስ እና 'sent' (ልኳል) የተባለውን ግስ እንጠቀማለን።"
+            },
+            {
+                q: "I think you ________ here for ten years.",
+                a: ["has lived", "have lived", "lived", "have live"],
+                correct: 1,
+                rationale_en: "The pronoun 'you' requires the auxiliary verb 'have' followed by 'lived'.",
+                rationale_am: "'you' (አንተ/አንቺ/እናንተ) የሚለው ተውላጠ ስም 'have' ረዳት ግስ እና 'lived' (ኖራችኋል) የሚለውን ግስ ይፈልጋል።"
+            },
+            {
+                q: "Sara ________ the piano.",
+                a: ["haven't played", "not played", "hasn't played", "hasn't play"],
+                correct: 2,
+                rationale_en: "Sara is singular, so the short negative form is 'hasn't' + 'played'.",
+                rationale_am: "ሳራ ነጠላ ስም ስለሆነች አጭሩን የአሉታዊ አረፍተ ነገር 'hasn't' እና 'played' (አልተጫወተችም) እንጠቀማለን።"
+            },
+            {
+                q: "The guests ________ their stay at our home.",
+                a: ["hasn't enjoyed", "not have enjoyed", "haven't enjoy", "haven't enjoyed"],
+                correct: 3,
+                rationale_en: "The subject 'The guests' is plural, so we use 'haven't' + 'enjoyed'.",
+                rationale_am: "ባለቤቱ 'The guests' (እንግዶቹ) ብዙ ቁጥር ስለሆኑ 'haven't' እና 'enjoyed' (አልተደሰቱም) እንጠቀማለን።"
+            },
+            {
+                q: "The maid ________ the glasses.",
+                a: ["hasn't broken", "haven't broken", "hasn't broke", "has not break"],
+                correct: 0,
+                rationale_en: "The singular subject 'The maid' takes 'hasn't' and the V3 form 'broken'.",
+                rationale_am: "ነጠላ ባለቤት 'The maid' (ሰራተኛዋ) 'hasn't' እና 'broken' (አልሰበረችም) የሚለውን 3ኛ የግስ ደረጃ ይወስዳል።"
+            },
+            {
+                q: "You ________ the exam.",
+                a: ["hasn't taken", "haven't taken", "haven't took", "not have taken"],
+                correct: 1,
+                rationale_en: "The pronoun 'You' matches with 'haven't' + past participle 'taken'.",
+                rationale_am: "'You' (እናንተ/አንተ) የሚለው ተውላጠ ስም 'haven't' እና 'taken' (አልወሰዳችሁም/አልወሰድክም) ከሚለው ጋር ይዛመዳል።"
+            },
+            {
+                q: "We ________ the flowers.",
+                a: ["hasn't watered", "not watered", "haven't watered", "haven't water"],
+                correct: 2,
+                rationale_en: "The plural pronoun 'We' uses 'haven't' + past participle 'watered'.",
+                rationale_am: "የብዙ ቁጥር ተውላጠ ስም 'We' (እኛ) 'haven't' እና 'watered' (አላጠጣንም) የሚሉትን ይወስዳል።"
+            },
+            {
+                q: "The exam ________ on time.",
+                a: ["have not started", "not has started", "has not start", "has not started"],
+                correct: 3,
+                rationale_en: "Singular subject 'The exam' requires 'has not' + regular past participle 'started'.",
+                rationale_am: "ነጠላ ባለቤት 'The exam' (ፈተናው) 'has not' እና 'started' (አልተጀመረም) የሚለውን መደበኛ የኃላፊ ጊዜ ግስ ይፈልጋል።"
+            },
+            {
+                q: "Their teacher ________ on time.",
+                a: ["has not come", "have not come", "has not came", "not has come"],
+                correct: 0,
+                rationale_en: "The past participle of 'come' is 'come', used here with singular 'has not'.",
+                rationale_am: "የ'come' 3ኛ የግስ ደረጃ ራሱ 'come' ሲሆን፣ እዚህ ከነጠላው 'has not' (አልመጣም) ጋር ጥቅም ላይ ውሏል።"
+            },
+            {
+                q: "Students ________ clear instruction.",
+                a: ["has not got", "have not got", "not have got", "have not get"],
+                correct: 1,
+                rationale_en: "Plural subject 'Students' takes 'have not' + past participle 'got'.",
+                rationale_am: "የብዙ ቁጥር ባለቤት 'Students' (ተማሪዎች) 'have not' እና 'got' (አላገኙም) የሚለውን ግስ ይወስዳል።"
+            },
+            {
+                q: "Most of the students ________ the exam.",
+                a: ["has not finished", "not have finished", "have not finished", "have not finish"],
+                correct: 2,
+                rationale_en: "'Most of the students' is plural, requiring 'have not' + 'finished'.",
+                rationale_am: "'Most of the students' (አብዛኞቹ ተማሪዎች) ብዙ ቁጥር ስለሆነ 'have not' እና 'finished' (አልጨረሱም) ይፈልጋል።"
+            },
+            {
+                q: "Especially, Kelil ________ the second part.",
+                a: ["have not done", "has not did", "not has done", "has not done"],
+                correct: 3,
+                rationale_en: "Kelil is a singular subject, so we use 'has not' + past participle 'done'.",
+                rationale_am: "ከሊል ነጠላ ስም በመሆኑ 'has not' እና 'done' (አልሰራም) የሚለውን 3ኛ ደረጃ ግስ እንጠቀማለን።"
+            },
+            {
+                q: "________ our team won the game?",
+                a: ["Has", "Have", "Did", "Do"],
+                correct: 0,
+                rationale_en: "'Our team' is a single collective entity, so we begin the question with 'Has'.",
+                rationale_am: "'Our team' (ቡድናችን) እንደ አንድ ነጠላ ስብስብ ስለሚቆጠር ጥያቄውን በ'Has' እንጀምራለን።"
+            },
+            {
+                q: "________ you given us the necessary support?",
+                a: ["Has", "Have", "Did", "Do"],
+                correct: 1,
+                rationale_en: "Interrogative sentences with the subject 'you' start with 'Have' in the present perfect.",
+                rationale_am: "ባለቤቱ 'you' በሆነበት ጊዜ የቅርብ ኃላፊ ጊዜ ጥያቄዎች በ'Have' ይጀምራሉ።"
+            },
+            {
+                q: "________ they been to Dire Dawa?",
+                a: ["Has", "Do", "Have", "Did"],
+                correct: 2,
+                rationale_en: "The plural subject 'they' requires the question to begin with 'Have'.",
+                rationale_am: "የብዙ ቁጥር ባለቤት 'they' (እነሱ) ጥያቄው በ'Have' እንዲጀምር ያደርጋል።"
+            },
+            {
+                q: "________ Alemitu visited the museum?",
+                a: ["Have", "Did", "Does", "Has"],
+                correct: 3,
+                rationale_en: "'Alemitu' is singular, so the question structure uses 'Has + subject + V3'.",
+                rationale_am: "አለሚቱ ነጠላ ስም በመሆኗ የጥያቄው መዋቅር 'Has + ባለቤት + 3ኛ ደረጃ ግስ' ይሆናል።"
+            },
+            {
+                q: "________ it been a wonderful diversity celebration week?",
+                a: ["Has", "Have", "Was", "Is"],
+                correct: 0,
+                rationale_en: "The pronoun 'it' requires 'Has' to form a present perfect question.",
+                rationale_am: "ተውላጠ ስም 'it' (እሱ/እሷ) የቅርብ ኃላፊ ጊዜ ጥያቄን ለመመስረት 'Has' ይፈልጋል።"
+            },
+            {
+                q: "________ they gone to the USA?",
+                a: ["Has", "Have", "Did", "Do"],
+                correct: 1,
+                rationale_en: "The plural pronoun 'they' is preceded by 'Have' in the question form.",
+                rationale_am: "የብዙ ቁጥር ተውላጠ ስም 'they' በጥያቄ መልክ 'Have' ቀድሞት ይመጣል።"
+            },
+            {
+                q: "________ you read 'War and Peace'?",
+                a: ["Did", "Do", "Have", "Has"],
+                correct: 2,
+                rationale_en: "The present perfect question for 'you' uses 'Have' followed by the past participle 'read'.",
+                rationale_am: "ለ'you' የሚጠየቅ የቅርብ ኃላፊ ጊዜ ጥያቄ 'Have'ን በመጠቀም በ'read' (የአነባብ ልዩነት አለው) ይከተላል።"
+            },
+            {
+                q: "________ Tigist come back from Canada?",
+                a: ["Have", "Did", "Is", "Has"],
+                correct: 3,
+                rationale_en: "'Tigist' is singular, so 'Has' is used at the beginning of the question.",
+                rationale_am: "ትዕግስት ነጠላ ስም በመሆኗ በጥያቄው መጀመሪያ ላይ 'Has' ጥቅም ላይ ይውላል።"
+            },
+            {
+                q: "________ we cleaned the room?",
+                a: ["Have", "Has", "Did", "Do"],
+                correct: 0,
+                rationale_en: "The pronoun 'we' takes 'Have' in positive interrogative structures.",
+                rationale_am: "ተውላጠ ስም 'we' (እኛ) በአዎንታዊ ጥያቄ መዋቅር ውስጥ 'Have'ን ይወስዳል።"
+            },
+            {
+                q: "________ they understood the instruction?",
+                a: ["Has", "Have", "Did", "Do"],
+                correct: 1,
+                rationale_en: "'They' is a plural subject, requiring 'Have' to start the question.",
+                rationale_am: "'They' የብዙ ቁጥር ባለቤት በመሆኑ ጥያቄውን ለመጀመር 'Have' ያስፈልገዋል።"
+            },
+            {
+                q: "What ________ you prepared for dinner?",
+                a: ["has", "did", "have", "are"],
+                correct: 2,
+                rationale_en: "For Wh-questions, the word order is Wh-word + have/has + subject + V3. 'You' takes 'have'.",
+                rationale_am: "ለ Wh-ጥያቄዎች የቃላት ቅደም ተከተል 'Wh-ቃል + have/has + ባለቤት + 3ኛ ደረጃ ግስ' ነው። 'You' ደግሞ 'have' ይወስዳል።"
+            },
+            {
+                q: "When ________ I ever lied to you?",
+                a: ["has", "did", "do", "have"],
+                correct: 3,
+                rationale_en: "The pronoun 'I' is paired with 'have' following the Wh-question word.",
+                rationale_am: "ተውላጠ ስም 'I' (እኔ) ከ Wh-የጥያቄ ቃል በኋላ ከ'have' ጋር ይጣመራል።"
+            },
+            {
+                q: "Why ________ Ted left the country?",
+                a: ["has", "have", "did", "was"],
+                correct: 0,
+                rationale_en: "Ted is a singular subject, so 'has' follows the question word 'Why'.",
+                rationale_am: "ቴድ ነጠላ ባለቤት ስለሆነ 'Why' (ለምን) ከሚለው የጥያቄ ቃል በኋላ 'has' ይከተላል።"
+            },
+            {
+                q: "How much money ________ you spent so far?",
+                a: ["has", "have", "did", "are"],
+                correct: 1,
+                rationale_en: "The question structure uses 'have' to match the subject pronoun 'you'.",
+                rationale_am: "የጥያቄው መዋቅር ከተውላጠ ስም 'you' ጋር ለማዛመድ 'have'ን ይጠቀማል።"
+            },
+            {
+                q: "When ________ you heard the news?",
+                a: ["has", "did", "have", "do"],
+                correct: 2,
+                rationale_en: "The Wh-question word 'When' is followed by 'have' for the subject 'you' in Present Perfect context.",
+                rationale_am: "በቅርብ ኃላፊ ጊዜ አውድ ውስጥ 'When' የሚለው የጥያቄ ቃል ለባለቤቱ 'you' በ'have' ይከተላል።"
+            },
+            {
+                q: "Why ________ Mathew quitted his job?",
+                a: ["have", "did", "was", "has"],
+                correct: 3,
+                rationale_en: "Mathew is singular, so the auxiliary verb 'has' must be used.",
+                rationale_am: "ማቴዎስ ነጠላ ስለሆነ 'has' የተባለው ረዳት ግስ ጥቅም ላይ መዋል አለበት።"
+            },
+            {
+                q: "When ________ we visited our parents?",
+                a: ["have", "has", "did", "do"],
+                correct: 0,
+                rationale_en: "The plural subject 'we' takes 'have' in this Wh-question layout.",
+                rationale_am: "የብዙ ቁጥር ባለቤት 'we' በዚህ የWh-ጥያቄ አወቃቀር ውስጥ 'have'ን ይወስዳል።"
+            },
+            {
+                q: "Who ________ bought dolls?",
+                a: ["have", "has", "did", "is"],
+                correct: 1,
+                rationale_en: "When 'Who' acts as the subject asking about an individual action, it defaults to singular 'has'.",
+                rationale_am: "'Who' (ማን) ስለ አንድ ድርጊት ፈጻሚ የሚጠይቅ ባለቤት ሆኖ ሲያገለግል፣ በነጠላ 'has' ይጀምራል።"
+            },
+            {
+                q: "What ________ I eaten?",
+                a: ["has", "did", "have", "am"],
+                correct: 2,
+                rationale_en: "The first-person singular 'I' requires 'have' right after 'What'.",
+                rationale_am: "የመጀመሪያ አካል ነጠላ 'I' (እኔ) ከ'What' በኋላ ወዲያውኑ 'have' ይፈልጋል።"
+            },
+            {
+                q: "How many rooms ________ the woman cleaned?",
+                a: ["have", "did", "is", "has"],
+                correct: 3,
+                rationale_en: "The real subject is 'the woman' (singular), which dictates the use of 'has'.",
+                rationale_am: "ዋናው ባለቤት 'the woman' (ሴትየዋ - ነጠላ) ስለሆነች 'has' የሚለውን ግስ እንጠቀማለን።"
+            },
+            {
+                q: "You have grown ________ last time I saw you.",
+                a: ["since", "for", "already", "yet"],
+                correct: 0,
+                rationale_en: "We use 'since' to introduce a specific starting point or event in the past.",
+                rationale_am: "ባለፈው ጊዜ የተወሰነ መነሻ ነጥብን ወይም ክስተትን ለመግለፅ 'since' (ከ... ጀምሮ) እንጠቀማለን።"
+            },
+            {
+                q: "James has not finished his homework ________",
+                a: ["already", "yet", "since", "for"],
+                correct: 1,
+                rationale_en: "'Yet' is commonly placed at the end of negative sentences to imply an expected action.",
+                rationale_am: "'Yet' (እስካሁን) በአብዛኛው በአሉታዊ አረፍተ ነገሮች መጨረሻ ላይ የሚጠበቅን ድርጊት ለመግለፅ ይቀመጣል።"
+            },
+            {
+                q: "She has been in America ________ six months.",
+                a: ["since", "already", "for", "just"],
+                correct: 2,
+                rationale_en: "We use 'for' when referring to a specific duration or particular length of time (six months).",
+                rationale_am: "የተወሰነ የጊዜ ርዝማኔን (ስድስት ወራት) ለመግለፅ 'for' (ለ...) እንጠቀማለን።"
+            },
+            {
+                q: "My English has really improved ________ I transferred to Grade 5.",
+                a: ["for", "before", "just", "since"],
+                correct: 3,
+                rationale_en: "'Since' marks the specific starting point of the improvement in the past.",
+                rationale_am: "'Since' በታሪክ ውስጥ የእድገቱ መነሻ የነበረውን የተወሰነ ጊዜ ያመለክታል።"
+            },
+            {
+                q: "We have lived in this house ________ the last fifteen years.",
+                a: ["for", "since", "already", "before"],
+                correct: 0,
+                rationale_en: "'The last fifteen years' describes a length of time, so 'for' is correct.",
+                rationale_am: "'የመጨረሻዎቹ አስራ አምስት አመታት' የጊዜ ርዝማኔን የሚገልፅ ስለሆነ 'for' ትክክለኛ ነው።"
+            },
+            {
+                q: "I have had a cold ________ two weeks.",
+                a: ["since", "for", "yet", "never"],
+                correct: 1,
+                rationale_en: "'Two weeks' represents a duration, which requires the time expression 'for'.",
+                rationale_am: "'ሁለት ሳምንታት' የጊዜ ቆይታን ስለሚወክል 'for' የሚለውን የጊዜ መግለጫ ይፈልጋል።"
+            },
+            {
+                q: "The guests have ________ arrived. They are taking off their coats right now.",
+                a: ["yet", "since", "just", "before"],
+                correct: 2,
+                rationale_en: "'Just' goes between have/has and the main verb to show an action finished a very short time ago.",
+                rationale_am: "'Just' (አሁን በትክክል) የሚለው ቃል በhave/has እና በዋና ግሱ መካከል በመግባት ድርጊቱ በጣም በቅርብ ጊዜ እንደተጠናቀቀ ያሳያል።"
+            },
+            {
+                q: "Martha has ________ bought a new dress. She showed it to me this morning.",
+                a: ["yet", "for", "since", "already"],
+                correct: 3,
+                rationale_en: "'Already' is placed between the auxiliary and main verb to express that something happened earlier than expected.",
+                rationale_am: "'Already' (በፊት/ቀድሞውኑ) የሚለው ቃል ድርጊቱ ከሚጠበቀው ጊዜ ቀድሞ እንደተከናወነ ለመግለፅ በረዳት እና ዋና ግስ መካከል ይገባል።"
+            },
+            {
+                q: "We have ________ finished our assignment, so we can go out to play.",
+                a: ["already", "just", "yet", "for"],
+                correct: 0,
+                rationale_en: "Positive sentences use 'already' to indicate completion before the present moment.",
+                rationale_am: "አወንታዊ አረፍተ ነገሮች 'already' (ቀድሞውኑ) በመጠቀም ስራው ከአሁኑ ሰዓት በፊት መጠናቀቁን ያመለክታሉ።"
+            },
+            {
+                q: "He has ________ sent the letter. The manager is reading it now.",
+                a: ["ever", "just", "yet", "since"],
+                correct: 1,
+                rationale_en: "'Just' describes an action completed very recently in an affirmative context.",
+                rationale_am: "'Just' በአዎንታዊ አውድ ውስጥ ድርጊቱ በጣም በቅርብ ጊዜ መጠናቀቁን ይገልጻል።"
+            },
+            {
+                q: "Have you ________ been to Jigjiga before?",
+                a: ["never", "yet", "ever", "since"],
+                correct: 2,
+                rationale_en: "We use 'ever' in interrogative structures to mean 'at any time up to now'.",
+                rationale_am: "'Ever' (አውቀህ/በህይወትህ) የሚለውን ቃል በጥያቄ መዋቅሮች ውስጥ 'እስካሁን ባለው ጊዜ ውስጥ በማንኛውም ጊዜ' ለማለት እንጠቀማለን።"
+            },
+            {
+                q: "No, I have ________ been there. This is my first time.",
+                a: ["ever", "already", "yet", "never"],
+                correct: 3,
+                rationale_en: "'Never' is used in affirmative sentence structures to express a negative experience up to the present.",
+                rationale_am: "'Never' (በፍጹም/አልፌ አላውቅም) በአወንታዊ የአረፍተ ነገር መዋቅር ውስጥ እስካሁን ድረስ ያልተደረገን ልምድ ለመግለፅ ያገለግላል።"
+            },
+            {
+                q: "He has never travelled by train ________",
+                a: ["before", "since", "for", "just"],
+                correct: 0,
+                rationale_en: "'Before' is positioned at the very end of a sentence to mean at an earlier time.",
+                rationale_am: "'Before' (ከዚህ በፊት) በአረፍተ ነገር መጨረሻ ላይ በመቀመጥ 'ቀደም ባለው ጊዜ' የሚል ትርጉም ይሰጣል።"
+            },
+            {
+                q: "The rain hasn't stopped ________",
+                a: ["already", "yet", "before", "many times"],
+                correct: 1,
+                rationale_en: "'Yet' is positioned at the end of negative sentences to describe a state that hasn't changed.",
+                rationale_am: "'Yet' በአሉታዊ አረፍተ ነገሮች መጨረሻ ላይ በመቀመጥ እስካሁን ያልተለወጠ ሁኔታን ይገልጻል።"
+            },
+            {
+                q: "We have been to Nairobi ________",
+                a: ["since", "for", "many times", "just"],
+                correct: 2,
+                rationale_en: "'Many times' appears at the end of a sentence to express a repeated past experience.",
+                rationale_am: "'Many times' (ብዙ ጊዜ) በአረፍተ ነገር መጨረሻ ላይ በመምጣት ደጋግሞ የተከሰተን የኃላፊ ጊዜ ልምድ ይገልጻል።"
+            },
+            {
+                q: "Hasn't the teacher missed classes ________?",
+                a: ["since", "for", "just", "so far"],
+                correct: 3,
+                rationale_en: "'So far' means up until now and fits at the end of an interrogative present perfect statement.",
+                rationale_am: "'So far' (እስካሁን ድረስ) ማለት እስከ አሁን ያለውን ጊዜ የሚያመለክት ሲሆን በጥያቄ መጨረሻ ላይ ይገባል።"
+            },
+            {
+                q: "Jitu has not ________ happy about the disorganized lesson.",
+                a: ["been", "be", "being", "was"],
+                correct: 0,
+                rationale_en: "The present perfect requires the past participle (V3) form of 'be', which is 'been'.",
+                rationale_am: "የቅርብ ኃላፊ ጊዜ የ 'be' ግስን 3ኛ የግስ ደረጃ 'been' ይፈልጋል።"
+            },
+            {
+                q: "Have you ________ cooked for your friends?",
+                a: ["never", "ever", "yet", "already"],
+                correct: 1,
+                rationale_en: "'Ever' is typically used in present perfect questions asking about life experiences.",
+                rationale_am: "'Ever' በአብዛኛው የህይወት ልምድን በሚጠይቁ የቅርብ ኃላፊ ጊዜ ጥያቄዎች ውስጥ ጥቅም ላይ ይውላል።"
+            },
+            {
+                q: "Gelana has ________ a spider.",
+                a: ["touch", "touching", "touched", "touches"],
+                correct: 2,
+                rationale_en: "The regular verb 'touch' forms its past participle by adding '-ed'.",
+                rationale_am: "መደበኛው ግስ 'touch' የ3ኛ ደረጃ ቅርፁን የሚይዘው '-ed' በመጨመር 'touched' በመሆን ነው።"
+            },
+            {
+                q: "Selam ________ turned off the TV.",
+                a: ["have", "is", "did", "has"],
+                correct: 3,
+                rationale_en: "Selam is a singular third-person subject, requiring 'has' in the present perfect affirmative form.",
+                rationale_am: "ሰላም ነጠላ 3ኛ አካል በመሆኗ በቅርብ ኃላፊ ጊዜ አወንታዊ አረፍተ ነገር ውስጥ 'has' ትፈልጋለች።"
+            }
+        ];
+
+        // 2. State & Session Variables
+        let currentIdx = 0;
+        let userResponses = new Array(quizData.length).fill(null); // stores index of selected options
+        let startTime = null;
+        let timerInterval = null;
+        let records = JSON.parse(localStorage.getItem('grade5_records')) || [];
+
+        // 3. Document Elements Selection
+        const regSection = document.getElementById('registration-section');
+        const quizSection = document.getElementById('quiz-section');
+        const resultsSection = document.getElementById('results-section');
+        const recordsSection = document.getElementById('records-section');
+        const reviewModal = document.getElementById('review-modal');
+
+        const inputName = document.getElementById('student-name');
+        const inputId = document.getElementById('student-id');
+        const btnStart = document.getElementById('btn-start');
+        const btnViewRecords = document.getElementById('btn-view-records');
+        const btnBackToReg = document.getElementById('btn-back-to-reg');
+
+        const metaStudentName = document.getElementById('meta-student-name');
+        const metaStudentId = document.getElementById('meta-student-id');
+        const qIndexBadge = document.getElementById('question-index-badge');
+        const scoreCounter = document.getElementById('score-counter');
+        const progressBar = document.getElementById('progress-bar');
+        const liveTimer = document.getElementById('live-timer');
+        const liveTimerContainer = document.getElementById('live-timer-container');
+
+        const questionText = document.getElementById('question-text');
+        const optionsGrid = document.getElementById('options-grid');
+        const explanationBox = document.getElementById('explanation-box');
+        const explanationEn = document.getElementById('explanation-en');
+        const explanationAm = document.getElementById('explanation-am');
+
+        const btnBack = document.getElementById('btn-back');
+        const btnSkip = document.getElementById('btn-skip');
+        const btnNext = document.getElementById('btn-next');
+
+        const finalScore = document.getElementById('final-score');
+        const finalPercentage = document.getElementById('final-percentage');
+        const finalRating = document.getElementById('final-rating');
+        const finalTime = document.getElementById('final-time');
+
+        const btnEmailResults = document.getElementById('btn-email-results');
+        const btnReviewAnswers = document.getElementById('btn-review-answers');
+        const btnRestart = document.getElementById('btn-restart');
+        const btnCloseReview = document.getElementById('btn-close-review');
+        const reviewItemsContainer = document.getElementById('review-items-container');
+
+        const recordsTbody = document.getElementById('records-tbody');
+        const noRecordsAlert = document.getElementById('no-records-alert');
+        const btnClearRecords = document.getElementById('btn-clear-records');
+
+        // 4. Initialization & Setup Events
+        btnStart.addEventListener('click', startQuizSession);
+        btnViewRecords.addEventListener('click', openTeacherDashboard);
+        btnBackToReg.addEventListener('click', showRegistrationScreen);
+        btnBack.addEventListener('click', navigatePrevious);
+        btnSkip.addEventListener('click', navigateSkip);
+        btnNext.addEventListener('click', navigateNextOrSubmit);
+        btnRestart.addEventListener('click', restartSession);
+        btnEmailResults.addEventListener('click', executeEmailAction);
+        btnReviewAnswers.addEventListener('click', openReviewModal);
+        btnCloseReview.addEventListener('click', closeReviewModal);
+        btnClearRecords.addEventListener('click', clearArchivedRecords);
+
+        // 5. Session Timer Controls
+        function startTimer() {
+            startTime = Date.now();
+            liveTimerContainer.classList.remove('hidden');
+            timerInterval = setInterval(() => {
+                const elapsedSeconds = Math.floor((Date.now() - startTime) / 1000);
+                liveTimer.textContent = formatElapsedTime(elapsedSeconds);
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function formatElapsedTime(totalSecs) {
+            const mins = Math.floor(totalSecs / 60);
+            const secs = totalSecs % 60;
+            return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // 6. Navigation and Registration Functions
+        function startQuizSession() {
+            const name = inputName.value.trim();
+            const id = inputId.value.trim();
+
+            if (!name || !id) {
+                alert("Please fill in both Full Name and Student ID before starting the exam!");
+                return;
+            }
+
+            // Bind metadata
+            metaStudentName.textContent = name;
+            metaStudentId.textContent = id;
+            document.getElementById('student-avatar').textContent = name.substring(0, 2).toUpperCase();
+
+            // Transition UI views
+            regSection.classList.add('hidden');
+            quizSection.classList.remove('hidden');
+
+            // Reset States
+            currentIdx = 0;
+            userResponses.fill(null);
+            startTimer();
+            renderQuestion();
+        }
+
+        function showRegistrationScreen() {
+            recordsSection.classList.add('hidden');
+            quizSection.classList.add('hidden');
+            resultsSection.classList.add('hidden');
+            regSection.classList.remove('hidden');
+            liveTimerContainer.classList.add('hidden');
+            stopTimer();
+        }
+
+        // 7. Core Quiz Engine Render Logic
+        function renderQuestion() {
+            const currentQuestion = quizData[currentIdx];
+            
+            // Adjust linear Progress bar & Badge metadata
+            const progressPct = ((currentIdx) / quizData.length) * 100;
+            progressBar.style.width = `${progressPct}%`;
+            qIndexBadge.textContent = `Question ${currentIdx + 1}/${quizData.length}`;
+            scoreCounter.textContent = `Score: ${calculateCurrentScore()}`;
+
+            // Set text values
+            questionText.innerHTML = `<span class="text-indigo-600 font-black mr-1">${currentIdx + 1}.</span> ${currentQuestion.q}`;
+            optionsGrid.innerHTML = '';
+            explanationBox.classList.add('hidden');
+
+            // Set active state navigation button styles
+            btnBack.disabled = (currentIdx === 0);
+            
+            if (currentIdx === quizData.length - 1) {
+                btnNext.innerHTML = `Submit Exam 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.857-9.809a.75.75 0 0 0-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clip-rule="evenodd" />
+                    </svg>`;
+                btnNext.className = "px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg text-sm flex items-center gap-1.5 shadow-md shadow-emerald-100 transition duration-150";
+            } else {
+                btnNext.innerHTML = `Next 
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>`;
+                btnNext.className = "px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg text-sm flex items-center gap-1.5 shadow-md shadow-indigo-100 transition duration-150";
+            }
+
+            // Render option selector items
+            const alphabet = ['A', 'B', 'C', 'D'];
+            const savedResponse = userResponses[currentIdx];
+
+            currentQuestion.a.forEach((opt, index) => {
+                const btn = document.createElement('button');
+                btn.type = "button";
+                btn.className = "w-full text-left p-4 rounded-xl border-2 transition duration-200 flex items-center gap-3.5 focus:outline-none ";
+                
+                // Construct standard markup with letter badge
+                btn.innerHTML = `
+                    <span class="w-8 h-8 flex-shrink-0 rounded-lg flex items-center justify-center font-bold text-sm bg-slate-100 border border-slate-200 text-slate-500">${alphabet[index]}</span>
+                    <span class="font-semibold text-slate-700 text-sm md:text-base">${opt}</span>
+                `;
+
+                // Handle already answered locking & styling
+                if (savedResponse !== null) {
+                    btn.disabled = true;
+                    const letterBadge = btn.querySelector('span');
+                    
+                    if (index === currentQuestion.correct) {
+                        // Mark Correct
+                        btn.className += " border-emerald-500 bg-emerald-50/70";
+                        letterBadge.className = "w-8 h-8 flex-shrink-0 rounded-lg flex items-center justify-center font-bold text-sm bg-emerald-500 text-white border border-emerald-500";
+                    } else if (index === savedResponse) {
+                        // Mark user selected incorrect option
+                        btn.className += " border-rose-400 bg-rose-50/70";
+                        letterBadge.className = "w-8 h-8 flex-shrink-0 rounded-lg flex items-center justify-center font-bold text-sm bg-rose-500 text-white border border-rose-500";
+                    } else {
+                        btn.className += " border-slate-100 bg-white opacity-60";
+                    }
+                } else {
+                    // Standard State hover
+                    btn.className += " border-slate-200 bg-white hover:border-indigo-400 hover:bg-indigo-50/20";
+                    btn.addEventListener('click', () => handleOptionSelection(index));
+                }
+
+                optionsGrid.appendChild(btn);
+            });
+
+            // Trigger rationale explanation layout
+            if (savedResponse !== null) {
+                explanationEn.textContent = currentQuestion.rationale_en;
+                explanationAm.textContent = currentQuestion.rationale_am;
+                explanationBox.classList.remove('hidden');
+            }
+        }
+
+        // 8. Event Processing on Selection
+        function handleOptionSelection(index) {
+            userResponses[currentIdx] = index;
+            // Immediate UI evaluation
+            renderQuestion();
+        }
+
+        // 9. Score calculation engine
+        function calculateCurrentScore() {
+            let correctCount = 0;
+            userResponses.forEach((resp, i) => {
+                if (resp !== null && resp === quizData[i].correct) {
+                    correctCount++;
+                }
+            });
+            return correctCount;
+        }
+
+        // 10. Navigation Triggering handlers
+        function navigatePrevious() {
+            if (currentIdx > 0) {
+                currentIdx--;
+                renderQuestion();
+            }
+        }
+
+        function navigateSkip() {
+            if (currentIdx < quizData.length - 1) {
+                currentIdx++;
+                renderQuestion();
+            } else {
+                finalizeAssessment();
+            }
+        }
+
+        function navigateNextOrSubmit() {
+            if (userResponses[currentIdx] === null) {
+                alert("Please select an answer option before moving forward, or click 'Skip' to proceed without answering.");
+                return;
+            }
+
+            if (currentIdx < quizData.length - 1) {
+                currentIdx++;
+                renderQuestion();
+            } else {
+                finalizeAssessment();
+            }
+        }
+
+        // 11. Grade Finalization & Archiving Engine
+        function finalizeAssessment() {
+            stopTimer();
+            progressBar.style.width = `100%`;
+
+            const elapsedSecs = Math.floor((Date.now() - startTime) / 1000);
+            const score = calculateCurrentScore();
+            const pct = Math.round((score / quizData.length) * 100);
+            
+            // Derive Performance Band Rating
+            let rating = "Needs Improvement";
+            let ratingColor = "text-rose-600";
+            if (pct >= 85) {
+                rating = "Excellent / በጣም ምርጥ";
+                ratingColor = "text-emerald-600";
+            } else if (pct >= 70) {
+                rating = "Very Good / በጣም ጥሩ";
+                ratingColor = "text-indigo-600";
+            } else if (pct >= 50) {
+                rating = "Good / ጥሩ";
+                ratingColor = "text-amber-600";
+            }
+
+            // Bind values to UI elements
+            finalScore.textContent = `${score}/${quizData.length}`;
+            finalPercentage.textContent = `${pct}%`;
+            finalRating.textContent = rating;
+            finalRating.className = `block text-sm md:text-base font-bold ${ratingColor} mt-2 tracking-wide uppercase`;
+            finalTime.textContent = formatElapsedTime(elapsedSecs);
+
+            // Store Record Locally for Dashboard
+            const newRecord = {
+                name: inputName.value.trim(),
+                id: inputId.value.trim(),
+                score: `${score}/${quizData.length}`,
+                duration: formatElapsedTime(elapsedSecs),
+                timestamp: new Date().toLocaleString()
+            };
+            records.push(newRecord);
+            localStorage.setItem('grade5_records', JSON.stringify(records));
+
+            // Transition UI views
+            quizSection.classList.add('hidden');
+            resultsSection.classList.remove('hidden');
+        }
+
+        function restartSession() {
+            resultsSection.classList.add('hidden');
+            regSection.classList.remove('hidden');
+            inputName.value = '';
+            inputId.value = '';
+        }
+
+        // 12. Mail Integration Implementation (Rule Guard: No Alert, pure custom interaction)
+        function executeEmailAction() {
+            const name = inputName.value.trim();
+            const id = inputId.value.trim();
+            const score = calculateCurrentScore();
+            const elapsed = finalTime.textContent;
+            const pct = finalPercentage.textContent;
+
+            const recipient = "mesayferedegn2@gmail.com";
+            const subject = encodeURIComponent(`Grade 5 English Exam Result: ${name} (ID: ${id})`);
+            
+            // Build text based results transcript
+            let bodyText = `STUDENT ASSESSMENT TRANSCRIPT - PRESENT PERFECT TENSE\n`;
+            bodyText += `==============================================\n`;
+            bodyText += `Full Name: ${name}\n`;
+            bodyText += `Student ID: ${id}\n`;
+            bodyText += `Final Score: ${score} / 60 (${pct})\n`;
+            bodyText += `Time Taken: ${elapsed}\n`;
+            bodyText += `Timestamp: ${new Date().toLocaleString()}\n`;
+            bodyText += `==============================================\n\n`;
+            bodyText += `ITEMIZED BREAKDOWN OF STUDENT PERFORMANCE:\n`;
+            
+            quizData.forEach((q, i) => {
+                const userChoiceIdx = userResponses[i];
+                const alphabet = ['A', 'B', 'C', 'D'];
+                const status = (userChoiceIdx === q.correct) ? "CORRECT ✔" : "INCORRECT ✘";
+                const studentAns = userChoiceIdx !== null ? alphabet[userChoiceIdx] : "SKIPPED";
+                const correctAns = alphabet[q.correct];
+
+                bodyText += `Q${i + 1}: [${status}] Student selected: ${studentAns} | Correct Answer: ${correctAns}\n`;
+            });
+
+            bodyText += `\nSent via Automated Assessment Module.\n`;
+
+            const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+            window.location.href = mailtoUrl;
+        }
+
+        // 13. Modal & Detailed Corrections Sheet View
+        function openReviewModal() {
+            reviewItemsContainer.innerHTML = '';
+            
+            quizData.forEach((data, index) => {
+                const userAnsIdx = userResponses[index];
+                const alphabet = ['A', 'B', 'C', 'D'];
+                const isCorrect = (userAnsIdx === data.correct);
+                const statusBg = isCorrect ? 'bg-emerald-50 border-emerald-100 text-emerald-800' : 'bg-rose-50 border-rose-100 text-rose-800';
+
+                const reviewCard = document.createElement('div');
+                reviewCard.className = `p-4 rounded-xl border ${isCorrect ? 'border-emerald-200 bg-white' : 'border-rose-200 bg-white'} space-y-3 shadow-sm`;
+                
+                reviewCard.innerHTML = `
+                    <div class="flex items-center justify-between gap-2">
+                        <span class="text-xs font-bold px-2 py-0.5 rounded-full ${statusBg}">
+                            Question ${index + 1} • ${isCorrect ? 'Correct / ትክክል' : 'Incorrect / ስህተት'}
+                        </span>
+                        <span class="text-slate-400 font-mono text-xs">Present Perfect</span>
+                    </div>
+                    <p class="font-bold text-slate-800 text-sm md:text-base">${data.q}</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                        ${data.a.map((opt, oIdx) => {
+                            let itemStyle = "bg-slate-50 border-slate-200 text-slate-600";
+                            if (oIdx === data.correct) {
+                                itemStyle = "bg-emerald-500 border-emerald-500 text-white font-bold";
+                            } else if (oIdx === userAnsIdx) {
+                                itemStyle = "bg-rose-500 border-rose-500 text-white font-bold";
+                            }
+                            return `<div class="p-2 rounded border ${itemStyle} text-center truncate">${alphabet[oIdx]}) ${opt}</div>`;
+                        }).join('')}
+                    </div>
+                    <div class="bg-indigo-50/40 rounded-lg p-3 border border-indigo-100/30 text-xs leading-relaxed space-y-1">
+                        <p class="font-semibold text-indigo-900">Explanation (English):</p>
+                        <p class="text-slate-600">${data.rationale_en}</p>
+                        <p class="font-semibold text-indigo-900 border-t border-indigo-100/50 pt-1.5 mt-1.5">ማብራሪያ (በአማርኛ):</p>
+                        <p class="text-slate-600">${data.rationale_am}</p>
+                    </div>
+                `;
+
+                reviewItemsContainer.appendChild(reviewCard);
+            });
+
+            reviewModal.classList.remove('hidden');
+        }
+
+        function closeReviewModal() {
+            reviewModal.classList.add('hidden');
+        }
+
+        // 14. Teacher Dashboard Control Portal
+        function openTeacherDashboard() {
+            regSection.classList.add('hidden');
+            recordsSection.classList.remove('hidden');
+            renderTeacherRecords();
+        }
+
+        function renderTeacherRecords() {
+            recordsTbody.innerHTML = '';
+            if (records.length === 0) {
+                noRecordsAlert.classList.remove('hidden');
+                return;
+            }
+            noRecordsAlert.classList.add('hidden');
+
+            // Render records in reverse order
+            [...records].reverse().forEach((record) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50/80 transition duration-150";
+                tr.innerHTML = `
+                    <td class="p-3 font-semibold text-slate-700">${record.name}</td>
+                    <td class="p-3 font-mono text-slate-500">${record.id}</td>
+                    <td class="p-3 text-center font-bold text-indigo-600">${record.score}</td>
+                    <td class="p-3 text-center text-slate-500">${record.duration}</td>
+                    <td class="p-3 text-right text-slate-400 font-mono text-[11px]">${record.timestamp}</td>
+                `;
+                recordsTbody.appendChild(tr);
+            });
+        }
+
+        function clearArchivedRecords() {
+            const confirmed = confirm("Are you sure you want to completely erase the local grade book records? This action cannot be undone.");
+            if (confirmed) {
+                records = [];
+                localStorage.removeItem('grade5_records');
+                renderTeacherRecords();
+            }
+        }
+    </script>
+</body>
+</html>
